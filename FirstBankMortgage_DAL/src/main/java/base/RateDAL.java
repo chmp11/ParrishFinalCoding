@@ -14,15 +14,43 @@ import domain.RateDomainModel;
 import util.HibernateUtil;
 
 public class RateDAL {
+	private static int GivenScore;
+	private static double Rate;
 
+	public static ArrayList<RateDomainModel> getRates() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction tx = null;
+		ArrayList<RateDomainModel> Rules = new ArrayList<RateDomainModel>();
 
+		try {
+			tx = session.beginTransaction();
+
+			List rules = session.createQuery("FROM RateDomainModel").list();
+			for (Iterator iterator = rules.iterator(); iterator.hasNext();) {
+				RateDomainModel rle = (RateDomainModel) iterator.next();
+				Rules.add(rle);
+
+			}
+
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return Rules;
+
+	}
+	
 	public static double getRate(int GivenCreditScore) {
-		//FinalExam - please implement		
-		// Figure out which row makes sense- return back the 
-		// right interest rate from the table based on the given credit score
-		
-		//FinalExam - obviously change the return value
-		return 0;
+		ArrayList<RateDomainModel> li= getRates();
+		for(RateDomainModel x: li){
+			if (x.getMINCREDITSCORE()==GivenScore);
+			Rate=x.getINTERESTRATE();
+		}
+		return Rate;
 	}
 
 }

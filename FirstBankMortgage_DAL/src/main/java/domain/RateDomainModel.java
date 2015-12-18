@@ -3,34 +3,44 @@ package domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import util.HibernateUtil;
 
 public class RateDomainModel implements Serializable {
 	
-	private int RateID;
-	private int MinCreditScore;
-	private double InterestRate;
+	private int RATEID;
+	private int MINCREDITSCORE;
+	private double INTERESTRATE;
 	
 	public RateDomainModel()
 	{
 		
 	}
-	public int getRateID() {
-		return RateID;
+	
+	public int getRATEID() {
+		return RATEID;
 	}
-	public void setRateID(int rateID) {
-		RateID = rateID;
+	public void setRATEID(int rateID) {
+		RATEID = rateID;
 	}
-	public int getMinCreditScore() {
-		return MinCreditScore;
+	public int getMINCREDITSCORE() {
+		return MINCREDITSCORE;
 	}
-	public void setMinCreditScore(int minCreditScore) {
-		MinCreditScore = minCreditScore;
+	public void setMINCREDITSCORE(int minCreditScore) {
+		MINCREDITSCORE = minCreditScore;
 	}
-	public double getInterestRate() {
-		return InterestRate;
+	public double getINTERESTRATE() {
+		return INTERESTRATE;
 	}
-	public void setInterestRate(double interestRate) {
-		InterestRate = interestRate;
+	public void setINTERESTRATE(double interestRate) {
+		INTERESTRATE = interestRate;
 	}
 	
 	

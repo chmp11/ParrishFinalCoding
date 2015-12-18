@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2014 2:49:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="domain.RateDomainModel" table="rate">
+
+		<id name="RATEID" type="int">
+			<column name="RATEID" length="9" />
+		</id>
+
+		<property name="MINCREDITSCORE" type="int">
+			<column name="MINCREDITSCORE" length="3" not-null="true" />
+		</property>
+		<property name="INTERESTRATE" type="int">
+			<column name="INTERESTRATE" length="4" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

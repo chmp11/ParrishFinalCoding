@@ -17,7 +17,31 @@ public class RootLayoutController {
         this.mainApp = mainApp;
     }
 
-
+    @FXML
+    private void handleNew(){
+    	
+    }
+    
+    @FXML 
+    private void handleSave(){
+    	
+    }
+    @FXML
+    private void handleSaveAs(){
+    	
+    }
+    @FXML
+    private void handleOpen(){
+    	
+    }
+    @FXML
+    private void handleAbout(){
+    	
+    }
+    @FXML
+    private void handleShowBirthdayStatistics(){
+    	
+    }
     @FXML
     private void handleExit() {
         System.exit(0);

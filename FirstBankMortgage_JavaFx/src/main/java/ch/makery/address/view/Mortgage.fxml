@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -11,10 +12,22 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
+                  <Label layoutX="18.0" layoutY="286.0" prefHeight="42.0" prefWidth="249.0" text="Mortage Payment" />
+                  <Label layoutX="19.0" layoutY="34.0" prefHeight="17.0" prefWidth="249.0" text="Enter your Income" />
+                  <Label layoutX="18.0" layoutY="87.0" prefHeight="17.0" prefWidth="249.0" text="Enter Your Expenses" />
+                  <Label layoutX="18.0" layoutY="138.0" prefHeight="17.0" prefWidth="249.0" text="Enter Your CreditScore" />
+                  <Label layoutX="19.0" layoutY="191.0" prefHeight="17.0" prefWidth="249.0" text="Enter Your House Cost" />
+                  <Label layoutX="22.0" layoutY="243.0" prefHeight="17.0" prefWidth="249.0" text="Select Your Mortage Term" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" >
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
+                  <ComboBox fx:id="cmbTerm" layoutX="24.0" layoutY="236.0" prefWidth="150.0" visibleRowCount="2" />
+                  <TextField fx:id="txtIncome" layoutX="24.0" layoutY="27.0" />
+                  <TextField fx:id="txtExpenses" layoutX="24.0" layoutY="78.0" />
+                  <TextField fx:id="txtCreditScore" layoutX="24.0" layoutY="131.0" />
+                  <TextField fx:id="txtHouseCost" layoutX="24.0" layoutY="181.0" />
+                  <Label fx:id="lblMortgagePayment" layoutX="24.0" layoutY="288.0" prefHeight="42.0" prefWidth="206.0" text="Label" />
                </children>
             </AnchorPane>
         </items>
